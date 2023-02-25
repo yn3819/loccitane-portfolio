@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Loccitane</title>
+    <link rel="stylesheet" href="css/layout4.css">
+    <script src="https://kit.fontawesome.com/5b7acb30ce.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script defer src="js/layout4.js"></script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <!-- 왼쪽 메뉴 -->
+        <div class="gnb_wrap">
+            <nav>
+                <div class="gnb_bar_wrap">
+                    <div class="gnb_btn">
+                        <div class="gnb_bar gnb_bar_1"></div>
+                        <div class="gnb_bar gnb_bar_2"></div>
+                        <div class="gnb_bar gnb_bar_3"></div>
+                    </div>
+                    <!-- 사이드 gnb -->
+                    <div class="gnb">
+                        <div class="gnb_menu_wrap">
+                            <div class="gnb_close">
+                                <img src="img/figure/gnb_close.png" alt="">
+                            </div>
+                            <umap_wrap_innerl class="gnb_menu1">
+                                <li><a href="https://yn3819.github.io/loccitane-portfolio/index1.html">MAIN</a></li>
+                                <li><a href="https://yn3819.github.io/loccitane-portfolio/index2.html">SHOPPING</a></li>
+                                <li><a href="https://yn3819.github.io/loccitane-portfolio/index3.html">FAQ</a></li>
+                                <li><a href="https://yn3819.github.io/loccitane-portfolio/index4.html">MAP</a></li>
+                            </umap_wrap_innerl>
+                            <div class="gnb_menu2">
+                                <p>1644-0000</p>
+                                <p>Copyright &copy Loccitane All rights reserved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- 로고 -->
+            <div class="logo">
+                <h1><a href="index.html"><img src="img/figure/logo.png" alt="logo"></a></h1>
+            </div>
+
+            <!-- 오른쪽 사이드 -->
+            <div class="side_link">
+                <div class="search">
+                    <div><input type="text"></div>
+                    <div class="search_icon"><img src="img/figure/seach.png" alt="검색"></div>
+                </div>
+                <div class="login_icon"><img src="img/figure/login.png" alt="로그인"></div>
+            </div>
+        </div>
+    </header>    <!-- header End -->
+
+    <!-- 모달창 -->
+    <div class="modal">
+        <div class="modal_bg"></div>
+        <div class="modal_box_wrap">
+            <div class="modal_wrap_1">
+                <img src="img/modal.jpg" alt="modal_img">
+            </div>
+            <div class="modal_wrap_2">
+                <div class="modal_wrap_2_inner">
+                    <div class="login_txt1">
+                        <div><h5>LOGIN</h5></div>
+                        <div class="close">
+                            <img src="img/login/log_close.png" alt="close">
+                        </div>
+                    </div>
+                    <div class="login_icon2">
+                        <div><img src="img/login/log_1.png" alt=""></div>
+                        <div><img src="img/login/log_2.png" alt=""></div>
+                        <div><img src="img/login/log_3.png" alt=""></div>
+                    </div>
+                    <div class="login_form">
+                        <form action="/" method="get">
+                            <fieldset>
+                                <input type="text" name="user_id" placeholder="ID">
+                                <input type="password" name="user_pwd" placeholder="PASSWORD">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="login_txt2">
+                        <div><p>forget your password?</p></div>
+                        <div>
+                            <button>LOGIN</button>
+                        </div>
+                        <div><p>Don't have an account? Sign Up</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section_1">
+        <div class="section_1_inner">
+            <div class="title">
+                <div class="title_inner">
+                    <h2>MAP</h2>
+                    <div>
+                        <p>오시는 길</p>
+                        <p>Directions</p>
+                    </div>
+                </div>
+            </div>
+            <div class="map_wrap">
+                <div class="map_wrap_inner">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101277.32771713972!2d126.92014811640622!3d37.50988770000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca46af03a8b15%3A0xc6d4b05aea98a74!2z66Gd7Iuc65WF!5e0!3m2!1sko!2skr!4v1671979344346!5m2!1sko!2skr"
+                                width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="shop_wrap">
+                        <div class="shop_1">
+                            <div>
+                                <button><img src="img/map/gps.png" alt=""></button>
+                                <input type="text" placeholder="가까운 매장 찾기">
+                                <button><img src="img/map/search.png" alt=""></button>
+                                <button><img src="img/map/close.png" alt=""></button>
+                            </div>
+                        </div>
+    
+                        <div class="shop_2">
+                            <div class="fliter_tit">
+                                <div class="on">서비스별 필터</div>
+                                <div>매장별 필터</div>
+                            </div>
+                            <div class="check_box_wrap">
+                                <div class="check_box check_1 on">
+                                    <form action="/" method="get">
+                                        <div class="form_wrap">
+                                            <div>
+                                                <label for="hand">편안한 손 마사지</label>
+                                                <input type="checkbox" name="service" id="hand">
+                                            </div>
+    
+                                            <div>
+                                                <label for="skin">피부 검사</label>
+                                                <input type="checkbox" name="service" id="skin">
+                                            </div>
+    
+                                            <div>
+                                                <label for="spar">스파</label>
+                                                <input type="checkbox" name="service" id="spar">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="check_box check_2">
+                                    <form action="/" method="get">
+                                        <div class="form_wrap">
+                                            <div>
+                                                <label for="boutique">부띠끄</label>
+                                                <input type="checkbox" name="shop" id="boutique">
+                                            </div>
+    
+                                            <div>
+                                                <label for="hotel">호텔</label>
+                                                <input type="checkbox" name="shop" id="hotel">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shop_3">
+                            <div class="shop_img_txt store_1">
+                                <div class="img"><img src="img/map/map.png" alt=""></div>
+                                <div class="txt_wrap">
+                                    <div class="txt_1">
+                                        <h3>AK PLAZA 수원</h3>
+                                        <p>경기도 수원시 팔달구 덕영대로 924 AK PLAZA 1층</p>
+                                    </div>
+                                    <div>
+                                        <div class="txt_2">
+                                            <i class="fa-regular fa-circle-check"></i>
+                                            <p>영업시간 10:30 am-08:00 pm</p>
+                                        </div>
+                                        <div class="txt_2">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <p>82 31 240 1146</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="shop_img_txt store_2">
+                                <div class="img"><img src="img/map/map.png" alt=""></div>
+                                <div class="txt_wrap">
+                                    <div class="txt_1">
+                                        <h3>갤러리아백화점 타임월드점</h3>
+                                        <p>대전광역시 서구 대덕대로 211 갤러리아백화점 타임월드점 1층</p>
+                                    </div>
+                                    <div>
+                                        <div class="txt_2">
+                                            <i class="fa-regular fa-circle-check"></i>
+                                            <p>영업시간 10:30 am-08:00 pm</p>
+                                        </div>
+                                        <div class="txt_2">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <p>82 31 240 1146</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            
+                            <div class="shop_img_txt store_3">
+                                <div class="img"><img src="img/map/map.png" alt=""></div>
+                                <div class="txt_wrap">
+                                    <div class="txt_1">
+                                        <h3>록시땅 현대백화점무역점</h3>
+                                        <p>서울 강남구 테헤란로 517 현대백화점 무역점 1층</p>
+                                    </div>
+                                    <div>
+                                        <div class="txt_2">
+                                            <i class="fa-regular fa-circle-check"></i>
+                                            <p>영업시간 10:30 am-08:00 pm</p>
+                                        </div>
+                                        <div class="txt_2">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <p>82 31 240 1146</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop_img_txt store_4">
+                                <div class="img"><img src="img/map/map.png" alt=""></div>
+                                <div class="txt_wrap">
+                                    <div class="txt_1">
+                                        <h3>롯데 인천 터미널점</h3>
+                                        <p>인천시 미추홀구 연남로 35 롯데백화점 인천터미널점 1층</p>
+                                    </div>
+                                    <div>
+                                        <div class="txt_2">
+                                            <i class="fa-regular fa-circle-check"></i>
+                                            <p>영업시간 10:30 am-08:00 pm</p>
+                                        </div>
+                                        <div class="txt_2">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <p>82 31 240 1146</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop_img_txt store_5">
+                                <div class="img"><img src="img/map/map.png" alt=""></div>
+                                <div class="txt_wrap">
+                                    <div class="txt_1">
+                                        <h3>롯데백화점 광복점</h3>
+                                        <p>부산광역시 중구 중앙대로 2 롯데백화점 광복점 1층</p>
+                                    </div>
+                                    <div>
+                                        <div class="txt_2">
+                                            <i class="fa-regular fa-circle-check"></i>
+                                            <p>영업시간 10:30 am-08:00 pm</p>
+                                        </div>
+                                        <div class="txt_2">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <p>82 31 240 1146</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop_img_txt store_6">
+                                <div class="img"><img src="img/map/map.png" alt=""></div>
+                                <div class="txt_wrap">
+                                    <div class="txt_1">
+                                        <h3>릴 스파 바이 록시땅</h3>
+                                        <p>제주특별자치도 서귀포시 상예동 596
+                                            63536 제주특별자치도</p>
+                                    </div>
+                                    <div>
+                                        <div class="txt_2">
+                                            <i class="fa-regular fa-circle-check"></i>
+                                            <p>영업시간 10:30 am-08:00 pm</p>
+                                        </div>
+                                        <div class="txt_2">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <p>82 31 240 1146</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop_img_txt store_7">
+                                <div class="img"><img src="img/map/map.png" alt=""></div>
+                                <div class="txt_wrap">
+                                    <div class="txt_1">
+                                        <h3>스타필드 코엑스몰점</h3>
+                                        <p>서울특별시 강남구 영동대로 513 (삼성동) 코엑스몰 B-106</p>
+                                    </div>
+                                    <div>
+                                        <div class="txt_2">
+                                            <i class="fa-regular fa-circle-check"></i>
+                                            <p>영업시간 10:30 am-08:00 pm</p>
+                                        </div>
+                                        <div class="txt_2">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <p>82 31 240 1146</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop_img_txt store_8">
+                                <div class="img"><img src="img/map/map.png" alt=""></div>
+                                <div class="txt_wrap">
+                                    <div class="txt_1">
+                                        <h3>신세계백화점 경기점</h3>
+                                        <p>경기도 용인시 수지구 포은대로 536 신세계백화점 경기점 1층</p>
+                                    </div>
+                                    <div>
+                                        <div class="txt_2">
+                                            <i class="fa-regular fa-circle-check"></i>
+                                            <p>영업시간 10:30 am-08:00 pm</p>
+                                        </div>
+                                        <div class="txt_2">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <p>82 31 240 1146</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- shop_3 End -->
+                    </div> <!-- shop_wrap End -->
+                </div>
+            </div>
+            <div class="map_txt">
+                <h4>매장찾기</h4>
+                <p>프로방스에서 시작된 놀라운 여정을 전세계 2,000여 개의 록시땅 부띠끄에서 함께하세요.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer_list">
+                <h5>customer care</h5>
+                <ul>
+                    <li>(02)2054-0500</li>
+                    <li>10:00 ~ 18:00</li>
+                </ul>
+            </div>
+            <div class="footer_list">
+                <h5>company info</h5>
+                <ul>
+                    <li>상호 : 록시땅코리아 유한책임회사</li>
+                    <li>대표자 : 안드레조셉호프만</li>
+                    <li>사업자 등록 번호 211-87-74234</li>
+                    <li> LOCCITANE@LOCCITANE.CO.KR</li>
+                    <li>서울특별시 강남구 테헤란로 87길 36(삼성동) 도심공항타워 21층(06164)</li>
+                </ul>
+            </div>
+            <div class="footer_list">
+                <h5>bank info</h5>
+                <ul>
+                    <li>결제관련문의 : 1588-4954</li>
+                    <li>주문관련문의 : (02)2054-050</li>
+                    <li>통신판매번호 : 2008-서울강남-0844</li>
+                </ul>
+            </div>
+            <div class="footer_list lang">
+                <h5>language</h5>
+                <label for="lang_select"></label>
+                <div class="select_box">
+                    <select name="lang_1" id="lang_select_1" class="type1">
+                        <option value="lang">대륙</option>
+                        <option value="Americas">Americas</option>
+                        <option value="Asia">Asia & Middle East</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Oceania">Oceania</option>
+                        <option value="Africa">Africa</option>
+                    </select>
+
+                    <div class="type2">
+                        <select name="lang_2" class="on">
+                            <option value="lang">언어</option>
+                
+                        </select>
+                        <select name="lang_2" id="lang_select">
+                            <option value="lang">언어</option>
+                            <option value="">Argentina</option>
+                            <option value="">Brasil</option>
+                            <option value="">Canada</option>
+                            <option value="">Chile</option>
+                            <option value="">Colombia</option>
+                            <option value="">Mexico</option>
+                            <option value="">United States</option>
+                        </select>
+                        <select name="lang_2" id="lang_select">
+                            <option value="lang">언어</option>
+                            <option value="">Azərbaycan</option>
+                            <option value="">China</option>
+                            <option value="">Hong Kong</option>
+                            <option value="">India</option>
+                            <option value="">Japan</option>
+                            <option value="">Korea</option>
+                            <option value="">Saudi Arabia</option>
+                            <option value="">Taiwan</option>
+                            <option value="">Vietnam</option>
+                        </select>
+                        <select name="lang_2" class="lang_select">
+                            <option value="lang">언어</option>
+                            <option value="">Albania</option>
+                            <option value="">Belgie</option>
+                            <option value="">Czechia</option>
+                            <option value="">Deutschland</option>
+                            <option value="">España</option>
+                            <option value="">Finland</option>
+                        </select>
+                        <select name="lang_2" class="lang_select">
+                            <option value="lang">언어</option>
+                            <option value="">Australia</option>
+                            <option value="">New Zealand</option>
+                        </select>
+                        <select name="lang_2" class="lang_select">
+                            <option value="lang">언어</option>
+                            <option value="">Tunisie</option>
+                            <option value="">South Africa</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div><!--container End-->
+
+
+</body>
+
+</html>

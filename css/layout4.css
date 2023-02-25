@@ -1,0 +1,657 @@
+@charset "UTF-8";
+*{margin:0;padding:0;box-sizing: border-box}
+ul,ol{list-style:none}
+a{text-decoration:none;color:inherit}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://webfontworld.github.io/kopus/KoPubWorldBatang.css');
+@import url('https://webfontworld.github.io/kopus/KoPubWorldDotum.css');
+/* font-family: 'Cormorant Garamond', serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'KoPubWorldDotum';
+font-family: 'KoPubWorldBatang'; */
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    color: #fff;
+    background: url("../img/loct_bg.jpg") no-repeat left top;
+    font: 300 15px/1.5 'KoPubWorldDotum';
+    overflow-y: hidden;
+}
+.bg img{
+    width: 100%;
+}
+.container{
+    width: 100%;
+    position: absolute;
+}
+header{
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 1;
+    width: 100%;
+}
+header .gnb_wrap{
+    width: 100%;
+    height: 100px;
+    border-bottom: 2px solid #fcbb01;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    padding: 0 40px;
+    background: url("../img/header_bg.jpg");
+}
+header .header_bg{
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+header .logo img{
+    width: 240px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+/* 왼쪽 gnb */
+header nav .gnb_bar{
+    width: 40px; 
+    height: 1px;
+    border-bottom: 1px solid #fff;
+    padding-top: 10px;
+    cursor: pointer;
+}
+/* 오른쪽 gnb */
+header .side_link{
+    display: flex;
+}
+header .side_link .search{
+    display: flex;
+}
+header .side_link input{
+    width: 140px;
+    height: 20px;
+    border: none;
+    outline: none;
+    background: rgba(0,0,0,0);
+    border-bottom: 1px solid #fcbb01;
+    color: #fff;
+    padding-left: 5px;
+}
+header .side_link .search_icon img,
+header .side_link .login_icon img{
+    width: 75%;
+    cursor: pointer;
+}
+header .side_link .search_icon{
+    margin-left: 10px;
+}
+header .logo img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Login Modal */
+.modal{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+/* 블랙 화면 */
+.modal_bg{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.7);
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+.modal_box_wrap{
+    width: 808px;
+    height: 500px;
+    color: #00102b;
+    background: rgb(255, 254, 248);
+    box-shadow: 3px 3px 3px rgba(0,0,0,.5);
+    font: 300 25px/1.5 'Roboto', 'sans-serif';
+    border-radius: 10px;
+    position: fixed;
+    float: right;
+    z-index: 1;
+    overflow: hidden;
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.modal_wrap_1{
+    float: left;
+    display: inline;
+}
+.modal_wrap_2{
+    margin: 50px;
+    float: right;
+}
+.modal_wrap_2{
+    display: inline;
+}
+.modal_wrap_2 .login_txt1{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #fcbb01;
+}
+.modal_wrap_2 .login_txt1 img{
+    cursor: pointer;
+}
+.modal_wrap_2 .login_icon2{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px auto;
+    cursor: pointer;
+}
+.modal_wrap_2 .login_form fieldset{
+    border: none;
+    width: 300px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 25px auto;
+}
+.modal_wrap_2 .login_form fieldset input{
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 2px 0px 3px rgba(0,0,0,.2);
+    padding: 0 10px;
+    color: #333;
+}
+.modal_wrap_2 .login_form input::placeholder{
+    color: #fcbb01;
+}
+.modal_wrap_2 .login_form input:focus{
+    outline: 0;
+    color: #333;
+}
+.modal_wrap_2 .login_txt2{
+    font-size: 13px;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.modal_wrap_2 .login_txt2 p{
+    display: inline;
+    cursor: pointer;
+}
+.modal_wrap_2 .login_txt2 p:nth-of-type(2){
+    margin-top: 10px;
+}
+.modal_wrap_2 button{
+    width: 300px;
+    height: 40px;
+    font-weight: 600;
+    border: 0;
+    background: #fcbb01;
+    border-radius: 50px;
+    cursor: pointer;
+}
+/* gnb */
+header .gnb_menu_wrap{
+    position: absolute;
+    width: 500px;
+    height: 100vmin;
+    background: rgba(255,255,255,.4);
+    top: 0;
+    left: 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 1s;
+    padding: 30px;
+    color: #00102b;
+    backdrop-filter: blur(30px);
+    opacity: 0;
+    z-index: 2;
+}
+header .gnb_menu1{
+    font: 700 70px/1.2 'Cormorant Garamond', serif;
+}
+header .gnb_menu1 li > a{
+    position: relative;
+}
+header .gnb_menu1 li > a:after{
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom: solid 1px #00102b;  
+    transform: scaleX(0);
+    transition: 0.5s ease-in;
+    transform-origin:0% 100%;
+}
+header .gnb_menu1 li a:hover:after{
+    transform: scaleX(1);
+}
+header .gnb_menu2{
+    font: 600 30px/1 'KoPubWorldDotum';
+}
+header .gnb_menu2 p:nth-of-type(2){
+    font: 500 14px/1 'KoPubWorldDotum'; 
+}
+.gnb_btn{
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    top: 27px;
+    transition:all 0.5s;
+}
+/* header.on 사이드 gnb */
+header .gnb{display:none;}
+header.on .gnb{display:block;}
+
+header.on .gnb_menu_wrap.on{
+    opacity: 1;
+    transition:all 1s
+}
+header.on .gnb_btn{
+    opacity: 0;
+    z-index: 1;
+}
+header .gnb_menu_wrap .gnb_close{
+    cursor: pointer;
+    display: inline;
+    align-self: flex-end;
+}
+
+/* section_1 */
+.section_1{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.section_1_inner{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 100px 20px 0;
+}
+.title_inner{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    font: 700 60px/1 'Cormorant Garamond', serif;
+    margin-bottom: 20px;
+}
+.title p{
+    font: 500 25px/1.5 'KoPubWorldDotum';
+    margin-left: 50px;
+
+}
+.title p:nth-of-type(2){
+    font-size: 15px;
+}
+/* map */
+.map_wrap{
+    width: 100%;
+    top: 250px;
+    left: 0;
+}
+.map_wrap_inner{
+    position: relative;
+}
+/* shop */
+.shop_wrap{
+    width: 330px;
+    height: 530px;
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    background: #fcbb01;
+    padding: 10px;
+    box-shadow: 0 0 3px rgba(0,0,0,.5);
+}
+.shop_wrap .shop_1{
+    height: 70px;
+    background: #fcbb01;
+    padding-bottom: 10px;
+}
+.shop_wrap .shop_1 div{
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+}
+.shop_wrap .shop_1 input{
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+.shop_wrap .shop_1 button{
+    background: #fff;
+    border: none;
+    cursor: pointer;
+}
+/* shop_2 */
+.shop_wrap .shop_2{
+    background: #fff;
+    color: #333;
+}
+.shop_2 .fliter_tit{
+    display: flex;
+    justify-content: space-between;
+}
+.shop_wrap .fliter_tit div{
+    width: 100%;
+    text-align: center;
+    font: 600 13px/1.5 'KoPubWorldDotum';
+    line-height: 30px;
+}
+.shop_wrap .fliter_tit div{
+    padding: 10px;
+    background:#fff;
+    background: rgb(230, 230, 230);
+}
+/* .on class */
+.shop_wrap .fliter_tit > div:nth-of-type(1).on,
+.shop_wrap .fliter_tit > div:nth-of-type(2).on{
+    background: #fff;
+}
+.shop_2 .check_1,
+.shop_2 .check_2{
+    display: none;
+    font-size: 13px;
+}
+.shop_2 .check_1.on,
+.shop_2 .check_2.on{
+    display: block;
+}
+/* check_box_wrap */
+.check_box_wrap{
+    position: relative;
+    background: #fff;
+    height: 50px;
+}
+/* form */
+.check_box{
+    width: 100%;
+}
+.form_wrap{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+}
+.form_wrap div{
+    display: flex;
+    align-items: center;
+}
+.form_wrap div label{
+    padding-right: 10px;
+}
+.check_box_wrap .check_1,
+.check_box_wrap .check_2{
+    position:absolute;
+    left:0;
+    top:0;
+}
+/* shop_3 */
+.shop_3{
+    height: 330px;
+    margin-top: 5px;
+    color: #333;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.shop_img_txt{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.shop_img_txt .img{
+    margin-right: 10px;
+}
+.shop_img_txt .img img{
+    width: 30px;
+}
+.shop_3 .txt_1 h3{
+    font-size: 15px;
+}
+.shop_3 .txt_1 p{
+    font-size: 13px;
+}
+.shop_3 .txt_2{
+    display: flex;
+    font-size: 11px;
+    align-items: center;
+}
+.shop_3 .txt_2 i{
+    padding-right: 10px;
+}
+/* store .on */
+.shop_3 div.on{
+    display: none;
+}
+.store_1.on, .store_2.on, .store_3.on, .store_4.on, .store_5.on, .store_6.on, .store_7.on, .store_8.on{
+    display: flex;
+}
+/* map_txt */
+.map_txt{
+    margin: 50px 0;
+}
+.map_txt p{
+    font-size: 14px;
+}
+/* footer */
+.footer{
+    width: 100%;
+    background: #fff;
+    color: #00102b;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 35px 150px;
+}
+.footer .footer_list h5{
+    font: 700 18px/1.5 'Roboto', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.footer .footer_list{
+    width: 225px;
+    margin-right: 25px;
+}
+.footer .footer_list:nth-of-type(4){
+    margin: 0;
+}
+.footer .footer_list ul{
+    color: #777;
+    font: 500 13px/1.4 'KoPubWorldDotum';
+}
+/* select box */
+.footer .select_box{
+    display:flex;
+    flex-direction: column;
+}
+.footer .select_box .type1{
+    border: none;
+    border-bottom: 1px solid #00102b;
+}
+.footer .select_box .type2{
+    width:200px;
+    height:30px;
+    position: relative;
+    margin-top: 7px;
+}
+.footer .select_box .type2 select{
+    position:absolute;
+    border: none;
+    border-bottom: 1px solid #00102b;
+    left:0;
+    top:0;
+    display:none;
+}
+.footer .select_box .type2 select.on{
+    display:block;
+}
+.footer select{
+    width: 190px;
+    height: 35px;
+}
+.footer select:focus{
+    outline: 0;
+    border: 1px solid #fcbb01;
+}
+#option-bg{
+    height: 50px;
+}
+
+
+/* 태블릿 pc */
+@media screen and (max-width: 1199px){
+    .shop_wrap{
+        width: 300px;
+    }
+   /* footer */
+   .footer{
+        justify-content: space-evenly;
+        text-align: center;
+        padding: 20px 80px;
+    }
+    .footer .footer_list{
+        margin-right: 0;
+        padding: 0 20px;
+    }
+    .footer .footer_list:nth-of-type(1),
+    .footer .footer_list:nth-of-type(2){
+        margin-bottom: 20px;
+    }
+    .footer .footer_list{
+        margin-bottom: 20px;
+    }
+}
+/* modal */
+@media screen and (max-width: 900px){
+    /* login */
+     .modal_box_wrap{
+        width: 400px;
+        padding: 0 40px;
+     }
+     .modal_wrap_1{
+        display: none;
+     }
+     .modal_wrap_2{
+        float: none;
+        padding: 20px;
+     }
+}
+/* 모바일 */
+@media screen and (max-width: 767px){
+    /* header */
+    header .gnb_wrap{
+        height: 70px;
+    }
+    header .logo img{
+        width: 150px;
+    }
+    header input{
+        display: none;
+    }
+    figure{
+        padding-top: 70px;
+    }
+    /* gnb */
+    .gnb_btn{
+        top: 19px;
+    }
+    header nav .gnb_bar{
+        width: 25px; 
+        padding-top: 7px;
+    }
+    header .gnb_menu_wrap{
+        width: 100%;
+        height: 400px;
+        text-align: center;
+    }
+    .gnb_close img{
+       width: 30px;
+    }
+    header .gnb_menu1{
+        font: 700 45px/1.4 'Cormorant Garamond', serif;
+    }
+    .gnb_menu2{
+        opacity: 0;
+    }
+
+    /* map */
+    .bg img{
+        height: 3000px;
+    }
+    .map iframe{
+       position: absolute;
+       top: 300px;
+    }
+  
+
+    /* shop */
+    .shop_wrap{
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: static;
+    }
+    .map iframe {
+        position: static;
+    }
+    .shop_img_txt{
+        justify-content: flex-start;
+    }
+    .title_inner{
+        flex-direction: column;
+        font-size: 50px;
+    }
+    .title p{
+        font-size: 16px;
+    }
+    .title p:nth-of-type(2){
+        font-size: 13px;
+    }
+    .title p{
+        margin-left: 0;
+    }
+    .txt_wrap dd{
+        font-size: 14px;
+    }
+   /* footer */
+   .footer .footer_list h5{
+    font-size: 15px;
+    margin: 0;
+   }
+   .footer .footer_list ul{
+    font-size: 10px;
+   }
+   .footer select{
+    transform: scale(0.8);
+   }
+}
+
